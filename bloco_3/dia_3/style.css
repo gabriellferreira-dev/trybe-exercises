@@ -30,6 +30,12 @@
 .word {
   position: absolute;
   left: 315px;
-  top: 108px;
+  top: 33px;
   z-index: 5;
+}
+
+#talking-bowser {
+  position: relative;
+  left: 500px;  
+  top: 150px;
 }
