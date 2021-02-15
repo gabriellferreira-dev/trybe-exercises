@@ -32,7 +32,7 @@ ul.languages li:nth-child(-n+3) {
 }
 
 ul.languages li[class*="java"] {
-  background-color: black;
+  background-color: pink;
 }
 
 /*
