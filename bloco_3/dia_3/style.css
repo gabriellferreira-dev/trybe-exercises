@@ -1,6 +1,6 @@
 div:nth-of-type(1) :hover {
   border-style: solid;
-  color: red;
+  border-color: red;
 }
 
 div:nth-of-type(2) :hover {
@@ -21,4 +21,24 @@ div:nth-of-type(4) :hover {
 div:nth-of-type(5) :hover {
   border-style: solid;
   color: rgb(247, 247, 117);
+}
+
+div:nth-of-type(1) h3 {
+  color: blue;
+}
+
+div:nth-of-type(2) h3 {
+  color: gray;
+}
+
+div:nth-of-type(3) h3 {
+  color: green;
+}
+
+div:nth-of-type(4) h3 {
+  color: orange;
+}
+
+div:nth-of-type(5) h3 {
+  color: olive;
 }
