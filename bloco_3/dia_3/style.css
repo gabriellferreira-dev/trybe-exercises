@@ -13,6 +13,12 @@ div:nth-of-type(3) :hover {
   color: green;
 }
 
+div:nth-of-type(3) {
+  height: 40px;
+  width: 500px;
+  background-color: orange;
+}
+
 div:nth-of-type(4) :hover {
   border-style: solid;
   color: darkblue;
