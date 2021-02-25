@@ -51,3 +51,19 @@ for (i = 0; i < numbers.length; i += 1) {
 }
 maiorNumero = oMaior;
 console.log("O maior número éh:", maiorNumero);
+
+// Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+let numImpar = 0;
+let numVerification;
+
+for (i = 0; i < numbers.length; i += 1) { 
+  numVerification = numbers[i] % 2;
+
+  if (numVerification !== 0) {
+    numImpar += 1;
+  } else if (numImpar === 0) {
+    console.log('Nenhum valor ímpar encontrado.');
+  }
+}
+
+console.log('A quantidade de números ímpares éh:', numImpar);
