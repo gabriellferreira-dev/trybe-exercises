@@ -16,3 +16,11 @@ for (let i = 0; i < numbers.length; i += 1) {
 
 console.log('A soma dos números eh:', sum);
 
+// 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+
+let media = 0;
+
+media = sum / numbers.length;
+
+console.log('Média aritimética:', media);
+
