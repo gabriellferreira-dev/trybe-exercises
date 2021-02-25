@@ -96,3 +96,11 @@ for (i = 1; i <= 25; i += 1) {
   array.push(i);
 }
 console.log(array);
+
+// 9 - Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+let divisao = 0;
+
+for (i = 0; i < array.length; i += 1) {
+  divisao = array[i] / 2;
+  console.log('A divisão do',i + 1,'º número éh:', divisao);
+}
