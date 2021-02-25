@@ -14,7 +14,7 @@ for (let i = 0; i < numbers.length; i += 1) {
   sum += numbers[i];
 }
 
-console.log("A soma dos números eh:", sum);
+console.log('A soma dos números eh:', sum);
 
 // 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
 
@@ -22,32 +22,12 @@ let media = 0;
 
 media = sum / numbers.length;
 
-console.log("Média aritimética:", media);
+console.log('Média aritimética:', media);
 
 // 4 - Com o mesmo código do exercício anterior, caso valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
 
 if (media > 20) {
-  console.log("Valor maior que 20");
+  console.log('Valor maior que 20');
 } else {
-  console.log("Valor menor ou igual a 20");
+  console.log('Valor menor ou igual a 20');
 }
-
-// 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o;
-let maiorNumero, oMaior = 0;
-i = 0;
-let num1 = numbers[i];
-
-for (i = 0; i < numbers.length; i += 1) {
-  let num2 = numbers[i + 1];
-
-  if (num1 > num2) {
-    oMaior = num1;
-  } else if (num2 > num1) {
-    oMaior = num2;
-  } else if (num1 === num2) {
-    oMaior = "Números iguais";
-  }
-  num1 = oMaior;
-}
-maiorNumero = oMaior;
-console.log("O maior número éh:", maiorNumero);
