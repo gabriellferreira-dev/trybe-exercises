@@ -52,7 +52,7 @@ for (i = 0; i < numbers.length; i += 1) {
 maiorNumero = oMaior;
 console.log("O maior número éh:", maiorNumero);
 
-// Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+// 6 - Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
 let numImpar = 0;
 let numVerification;
 
@@ -67,3 +67,23 @@ for (i = 0; i < numbers.length; i += 1) {
 }
 
 console.log('A quantidade de números ímpares éh:', numImpar);
+
+// 7 - Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+let menorNumero, oMenor = 0;
+i = 0;
+num1 = numbers[i];
+
+for (i = 0; i < numbers.length; i += 1) {
+  num2 = numbers[i + 1];
+
+  if (num1 < num2) {
+    oMenor = num1;
+  } else if (num2 < num1) {
+    oMenor = num2;
+  } else if (num1 === num2) {
+    oMenor = "Números iguais";
+  }
+  num1 = oMenor;
+}
+menorNumero = oMenor;
+console.log("O menor número éh:", menorNumero);
