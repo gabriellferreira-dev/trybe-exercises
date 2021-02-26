@@ -14,7 +14,7 @@ for (let i = 0; i < numbers.length; i += 1) {
   sum += numbers[i];
 }
 
-console.log('A soma dos números eh:', sum);
+console.log("A soma dos números eh:", sum);
 
 // 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
 
@@ -22,18 +22,19 @@ let media = 0;
 
 media = sum / numbers.length;
 
-console.log('Média aritimética:', media);
+console.log("Média aritimética:", media);
 
 // 4 - Com o mesmo código do exercício anterior, caso valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
 
 if (media > 20) {
-  console.log('Valor maior que 20');
+  console.log("Valor maior que 20");
 } else {
-  console.log('Valor menor ou igual a 20');
+  console.log("Valor menor ou igual a 20");
 }
 
 // 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o;
-let maiorNumero, oMaior = 0;
+let maiorNumero,
+  oMaior = 0;
 i = 0;
 let num1 = numbers[i];
 
@@ -56,20 +57,21 @@ console.log("O maior número éh:", maiorNumero);
 let numImpar = 0;
 let numVerification;
 
-for (i = 0; i < numbers.length; i += 1) { 
+for (i = 0; i < numbers.length; i += 1) {
   numVerification = numbers[i] % 2;
 
   if (numVerification !== 0) {
     numImpar += 1;
   } else if (numImpar === 0) {
-    console.log('Nenhum valor ímpar encontrado.');
+    console.log("Nenhum valor ímpar encontrado.");
   }
 }
 
-console.log('A quantidade de números ímpares éh:', numImpar);
+console.log("A quantidade de números ímpares éh:", numImpar);
 
 // 7 - Utilizando for , descubra qual o menor valor contido no array e imprima-o;
-let menorNumero, oMenor = 0;
+let menorNumero,
+  oMenor = 0;
 i = 0;
 num1 = numbers[i];
 
@@ -102,7 +104,7 @@ let divisao = 0;
 
 for (i = 0; i < array.length; i += 1) {
   divisao = array[i] / 2;
-  console.log('A divisão do',i + 1,'º número éh:', divisao);
+  console.log("A divisão do", i + 1, "º número éh:", divisao);
 }
 
 // BÔNUS
@@ -118,7 +120,7 @@ for (i = 0; i < numbers.length; i += 1) {
     }
   }
 }
-console.log('Array ordenada em ordem crescente: ');
+console.log("Array ordenada em ordem crescente: ");
 console.log(numbers);
 
 // 2 - Ordene o array numbers em ordem decrescente e imprima seus valores;
@@ -133,5 +135,21 @@ for (i = 0; i < numbers.length; i += 1) {
     }
   }
 }
-console.log('Array ordenada em ordem decrescente: ');
+console.log("Array ordenada em ordem decrescente: ");
 console.log(numbers);
+
+// 3 - Agora você irá criar um novo array a partir do array numbers , sem perdê-lo. Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte.
+
+let newNumbers = [];
+let result = 0;
+
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+for (i = 0; i < numbers.length; i += 1) {
+  result = numbers[i] * numbers[i + 1];
+  newNumbers.push(result);
+}
+newNumbers.pop();
+newNumbers.push((numbers[numbers.length - 1]) * 2);
+
+console.log("Nova array com valores múltiplicados:", newNumbers);
