@@ -104,3 +104,19 @@ for (i = 0; i < array.length; i += 1) {
   divisao = array[i] / 2;
   console.log('A divisão do',i + 1,'º número éh:', divisao);
 }
+
+// BÔNUS
+// 1 - Ordene o array numbers em ordem crescente e imprima seus valores;
+
+for (i = 0; i < numbers.length; i += 1) {
+  for (let j = 0; j < i; j += 1) {
+    if (numbers[i] < numbers[j]) {
+      let position = numbers[i];
+
+      numbers[i] = numbers[j];
+      numbers[j] = position;
+    }
+  }
+}
+console.log('Array ordenada em ordem crescente: ');
+console.log(numbers);
