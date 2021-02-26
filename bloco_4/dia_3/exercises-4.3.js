@@ -12,3 +12,12 @@ for (let j = 0; j < n; j += 1) {
   figura += forma;
   console.log(figura);
 }
+
+// 2- Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. 
+let triangulo = '';
+console.log('');
+
+for (let i = 1; i < n; i += 1) {
+  triangulo += '*';
+  console.log(triangulo);
+}
