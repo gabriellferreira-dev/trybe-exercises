@@ -120,3 +120,18 @@ for (i = 0; i < numbers.length; i += 1) {
 }
 console.log('Array ordenada em ordem crescente: ');
 console.log(numbers);
+
+// 2 - Ordene o array numbers em ordem decrescente e imprima seus valores;
+
+for (i = 0; i < numbers.length; i += 1) {
+  for (let j = 0; j < i; j += 1) {
+    if (numbers[i] > numbers[j]) {
+      let position = numbers[j];
+
+      numbers[j] = numbers[i];
+      numbers[i] = position;
+    }
+  }
+}
+console.log('Array ordenada em ordem decrescente: ');
+console.log(numbers);
