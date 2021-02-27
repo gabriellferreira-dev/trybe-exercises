@@ -41,8 +41,17 @@ for (i = 1; i < n; i += 1) {
 console.log('');
 let piramide = '';
 let caracter = '*';
+let espacamento = '';
 
 for (piramide = ''; piramide.length < n; piramide += '*') {
   piramide += caracter;
-  console.log(piramide);
+  for (j = 1; j < n - piramide.length; j += 1) {
+    espaco += ' ';
+  }
+
+  if (piramide.length < n) {
+    espacamento = espaco.substr(espaco.length/2);
+  }
+  console.log(espacamento + piramide);
+  espaco = '';
 }
