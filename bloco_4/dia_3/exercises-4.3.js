@@ -26,7 +26,6 @@ for (let i = 1; i < n; i += 1) {
 triangulo = '';
 console.log('');
 let espaco = '';
-let quantEspaco = '';
 
 for (i = 1; i < n; i += 1) {
   triangulo += '*';
@@ -36,4 +35,14 @@ for (i = 1; i < n; i += 1) {
   invert = espaco + triangulo;
   console.log(invert);
   espaco = '';
+}
+
+// 4- Depois, faça uma pirâmide com n asteriscos de base:
+console.log('');
+let piramide = '';
+let caracter = '*';
+
+for (piramide = ''; piramide.length < n; piramide += '*') {
+  piramide += caracter;
+  console.log(piramide);
 }
