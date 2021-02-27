@@ -21,3 +21,19 @@ for (let i = 1; i < n; i += 1) {
   triangulo += '*';
   console.log(triangulo);
 }
+
+// 3- Agora inverta o lado do triângulo.
+triangulo = '';
+console.log('');
+let espaco = '';
+let quantEspaco = '';
+
+for (i = 1; i < n; i += 1) {
+  triangulo += '*';
+  for (let j = 1; j < n - triangulo.length; j += 1) {
+    espaco += ' ';
+  }
+  invert = espaco + triangulo;
+  console.log(invert);
+  espaco = '';
+}
