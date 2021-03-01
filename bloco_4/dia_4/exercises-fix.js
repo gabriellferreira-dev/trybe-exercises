@@ -27,3 +27,7 @@ console.log('A jodadora ' + player.fullName + ' tem ' + player.age + ' anos de i
 // Adicione ao objeto a chave bestInTheWorld e atribua a esta chave um array contendo as datas em que a jogadora Marta foi considerada a melhor do mundo.
 
 player['bestInTheWorld'] = [2006, 2007, 2008, 2009, 2010, 2018];
+
+// Acesse a chave bestInTheWorld e faça um console.log no seguinte formato: "A jogadora Marta Silva foi eleita a melhor do mundo por 6 vezes".
+
+console.log('A jogadora ' + player.fullName + ' foi eleita a melhor do mundo por ' + Object.keys(player.bestInTheWorld).length + ' vezes');
