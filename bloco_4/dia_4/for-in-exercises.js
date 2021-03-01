@@ -1,4 +1,4 @@
-let info = {
+let infoOne = {
   personagem: "Margarida",
   origem: "Pato Donald",
   nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
@@ -6,21 +6,21 @@ let info = {
 
 // 1 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome.
 console.log('=== 1 ===');
-console.log('Bem-vinda, ' + info.personagem);
+console.log('Bem-vinda, ' + infoOne.personagem);
 console.log('');
 
 // 2 - Insira no objeto uma nova propriedade com o nome de chave "recorrente" e o valor "Sim" e, em seguida, imprima o objeto no console.
 
-info['recorrente'] = 'Sim';
+infoOne['recorrente'] = 'Sim';
 
 console.log('=== 2 ===');
-console.log(info);
+console.log(infoOne);
 console.log('');
 
 // 3 - Faça um for/in que mostre todas as chaves do objeto.
 console.log('=== 3 ===');
 
-for (let key in info) {
+for (let key in infoOne) {
   console.log(key);
 }
 
@@ -29,7 +29,30 @@ console.log('');
 // 4 - Faça um novo for/in , mas agora mostre todos os valores das chaves do objeto.
 console.log('=== 4 ===');
 
-for (let value in info) {
-  console.log(info[value]);
+for (let value in infoOne) {
+  console.log(infoOne[value]);
 }
 console.log('');
+
+// 5 - Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: "Tio Patinhas", "Christmas on Bear Mountain, Dell's Four Color Comics #178", "O último MacPatinhas", "Sim".
+
+// Solução retirada do gabarito da Trybe.
+// https://app.betrybe.com/course/fundamentals/javascript/js-features/js-part-4-solutions#exercicio-5
+
+console.log('=== 5 ===');
+
+infoTwo = {
+  personagem: 'Tio Patinhas',
+  origem: 'Christmas on Bear Mountain, Dells Four Color Comics #178',
+  nota: 'O último MacPatinhas',
+  recorrente: 'Sim'
+}
+
+
+for (i in infoTwo) {
+  if (infoOne[i] === infoOne.recorrente && infoOne[i] === 'Sim' && infoTwo[i] === 'Sim') {
+    console.log('Ambos recorrentes');
+  } else {
+    console.log(infoOne[i] + ' e ' + infoTwo[i]);
+  }
+}
