@@ -66,9 +66,14 @@
     tagsContent[i] = tagsContent[i].style.textTransform = 'uppercase';
   }
 
-  /*
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
+  //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+
+  tagsContent = document.getElementsByTagName('p');
+
+  for (let i = 0; i < tagsContent.length; i += 1) {
+    console.log(tagsContent[i].innerHTML);
+  }
+
     </script>
   </body>
 </html>
