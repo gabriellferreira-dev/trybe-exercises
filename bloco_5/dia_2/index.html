@@ -63,6 +63,7 @@
       let tagP = document.createElement('p');
       let tagDivLeft = document.createElement('div');
       let tagDivRight = document.createElement('div');
+      let tagImg = document.createElement('img');
 
       document.body.appendChild(tagH1).innerHTML = 'Exercício 5.2 - JavaScript DOM';
       tagDiv.className = 'main-content';
@@ -79,6 +80,10 @@
 
       document.querySelector('.main-content').appendChild(tagDivRight);
       tagDivRight.className = 'right-content';
+
+      document.querySelector('.left-content').appendChild(tagImg);
+      tagImg.src = 'https://picsum.photos/200';
+      tagImg.className = 'small-image';
 
     </script>
   </body>
