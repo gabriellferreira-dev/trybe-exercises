@@ -62,6 +62,7 @@
       let divChild = document.createElement('div');
       let tagP = document.createElement('p');
       let tagDivLeft = document.createElement('div');
+      let tagDivRight = document.createElement('div');
 
       document.body.appendChild(tagH1).innerHTML = 'Exercício 5.2 - JavaScript DOM';
       tagDiv.className = 'main-content';
@@ -75,6 +76,9 @@
 
       document.querySelector('.main-content').appendChild(tagDivLeft);
       tagDivLeft.className = 'left-content';
+
+      document.querySelector('.main-content').appendChild(tagDivRight);
+      tagDivRight.className = 'right-content';
 
     </script>
   </body>
