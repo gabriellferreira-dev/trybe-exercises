@@ -64,6 +64,8 @@
       let tagDivLeft = document.createElement('div');
       let tagDivRight = document.createElement('div');
       let tagImg = document.createElement('img');
+      let listNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      let tagUl = document.createElement('ul');
 
       document.body.appendChild(tagH1).innerHTML = 'Exercício 5.2 - JavaScript DOM';
       tagDiv.className = 'main-content';
@@ -84,6 +86,17 @@
       document.querySelector('.left-content').appendChild(tagImg);
       tagImg.src = 'https://picsum.photos/200';
       tagImg.className = 'small-image';
+
+      document.querySelector('.right-content').appendChild(tagUl);
+
+
+      for (let i = 0; i < listNumbers.length; i += 1) {
+        let liValue = document.createElement('li');
+        liValue.innerHTML = listNumbers[i];
+
+        document.querySelector('ul').appendChild(liValue);
+      }
+      
 
     </script>
   </body>
