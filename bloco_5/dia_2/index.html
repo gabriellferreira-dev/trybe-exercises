@@ -66,6 +66,7 @@
       let tagImg = document.createElement('img');
       let listNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
       let tagUl = document.createElement('ul');
+      let tagH3 = document.createElement('h3');
 
       document.body.appendChild(tagH1).innerHTML = 'Exercício 5.2 - JavaScript DOM';
       tagDiv.className = 'main-content';
@@ -97,6 +98,10 @@
         document.querySelector('ul').appendChild(liValue);
       }
       
+      for (let i = 0; i < 3; i += 1) {
+        let tagH3 = document.createElement('h3');
+        document.querySelector('.main-content').appendChild(tagH3);
+      }
 
     </script>
   </body>
