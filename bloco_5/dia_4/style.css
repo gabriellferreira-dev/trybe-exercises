@@ -1,0 +1,19 @@
+.header {
+  text-align: center;
+}
+
+#title {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.header p {
+  line-height: 5px;
+  font-style: italic;
+}
+
+.content {
+  margin: 0 200px;
+  margin-top: 30px;
+  border-top: 2px solid rgb(200, 20, 100);
+}
