@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Currículo</h1>
+  </header>
+  <div class="content">
+    <form action="" method="get" class="form">
+      <fieldset class="fieldset-input">
+        <legend>Dados pessoais</legend>
+        <div class="name-surname">
+          <label class="label">Nome
+            <input class="input" type="text" maxlength="40" required name="name" id="name">
+          </label>
+          <label class="label">Sobrenome
+            <input class="input" type="text" maxlength="40" required name="surname" id="surname">
+          </label>
+        </div>
+        <label class="label">E-mail</label>
+        <input class="input" maxlength="50" required type="text" name="e-mail" id="e-mail">
+        <label class="label">CPF</label>
+        <input class="input" maxlength="11" required type="text" name="cpf" id="cpf">
+        <label class="label">Endereço</label>
+        <input class="input" maxlength="200" required type="text" name="endereco" id="endereco">
+        <label class="label">Cidade</label>
+        <input class="input" type="text" maxlength="28" required name="cidade" id="cidade">
+        <label class="label">Estado</label>
+        <select name="estado" id="estado" required></select>
+        <label class="label">Tipo Moradia</label>
+        <br>
+        <input class="input-radio" required type="radio" name="tipo" id="housing-type-1">
+        <label class="label-radio" for="tipo">Casa</label>
+        <input class="nput-radio" required type="radio" name="tipo" id="housing-type-2">
+        <label class="label-radio" for="tipo">Apartamento</label>
+      </fieldset>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
