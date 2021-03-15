@@ -32,3 +32,13 @@
   display: inline-block;
   margin: 0 3px;
 }
+
+.paragraph {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.current-value-font,
+.current-value-line {
+  display: inline-block;
+}
