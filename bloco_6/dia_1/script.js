@@ -1,6 +1,7 @@
 const estado = document.getElementById("estado");
 const checkDate = document.querySelector('.check-date');
 const startDate = document.getElementById('start-date');
+const btnSubmit = document.getElementById('submit');
 
 const estados = [
   "AC - Acre",
@@ -62,3 +63,19 @@ startDate.addEventListener('keyup', () => {
   validateMonth(date);
   validateYear(date);
 });
+
+function required() {
+  const inputText = document.querySelectorAll('input[type=text]');
+  for (let i = 0; i < inputText.length; i += 1) {
+    inputText[i].setAttribute('required', '');
+  }
+}
+
+const preventDef = function (event) {
+  event.preventDefault();
+}
+
+btnSubmit.addEventListener('click', () => {
+  preventDef;
+  required();
+})

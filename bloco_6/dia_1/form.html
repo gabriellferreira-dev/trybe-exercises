@@ -11,32 +11,32 @@
     <h1>Currículo</h1>
   </header>
   <div class="content">
-    <form action="" method="get" class="form">
+    <form action="" method="get" class="form" id="form">
       <fieldset class="personal-data">
         <legend>Dados pessoais</legend>
         <div class="name-surname">
           <label class="label">Nome
-            <input class="input" type="text" maxlength="40" required name="name" id="name">
+            <input class="input" type="text" maxlength="40" name="name" id="name">
           </label>
           <label class="label">Sobrenome
-            <input class="input" type="text" maxlength="40" required name="surname" id="surname">
+            <input class="input" type="text" maxlength="40" name="surname" id="surname">
           </label>
         </div>
         <label class="label">E-mail</label>
-        <input class="input" maxlength="50" required type="text" name="e-mail" id="e-mail">
+        <input class="input" maxlength="50" type="text" name="e-mail" id="e-mail">
         <label class="label">CPF</label>
-        <input class="input" maxlength="11" required type="text" name="cpf" id="cpf">
+        <input class="input" maxlength="11" type="text" name="cpf" id="cpf">
         <label class="label">Endereço</label>
-        <input class="input" maxlength="200" required type="text" name="endereco" id="endereco">
+        <input class="input" maxlength="200" type="text" name="endereco" id="endereco">
         <label class="label">Cidade</label>
-        <input class="input" type="text" maxlength="28" required name="cidade" id="cidade">
+        <input class="input" type="text" maxlength="28" name="cidade" id="cidade">
         <label class="label">Estado</label>
-        <select name="estado" id="estado" required></select>
+        <select name="estado" id="estado"></select>
         <label class="label">Tipo Moradia</label>
         <br>
-        <input class="input-radio" required type="radio" name="tipo" id="housing-type-1">
+        <input class="input-radio" type="radio" name="tipo" id="housing-type-1">
         <label class="label-radio" for="tipo">Casa</label>
-        <input class="nput-radio" required type="radio" name="tipo" id="housing-type-2">
+        <input class="nput-radio" type="radio" name="tipo" id="housing-type-2">
         <label class="label-radio" for="tipo">Apartamento</label>
       </fieldset>
 
@@ -52,6 +52,8 @@
         <input class="input" type="text" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required name="start-date" id="start-date">
         <span class="check-date"></span>
       </fieldset>
+      <button id="submit" type="submit">Submit</button>
+      <button type="reset">Limpar</button>
     </form>
   </div>
   <script src="script.js"></script>
