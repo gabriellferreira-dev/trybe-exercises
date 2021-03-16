@@ -30,9 +30,10 @@ body {
   margin-top: 20px;
 }
 
-.fieldset-input{
+.personal-data, .last-job {
   padding: 20px;
   width: 40%;
+  display: inline-block;
 }
 
 .input, select {
@@ -63,4 +64,8 @@ input[type=text] {
 .name-surname input{
   display: block;
   width: 230px;
+}
+
+.last-job {
+  float: right;
 }

@@ -12,7 +12,7 @@
   </header>
   <div class="content">
     <form action="" method="get" class="form">
-      <fieldset class="fieldset-input">
+      <fieldset class="personal-data">
         <legend>Dados pessoais</legend>
         <div class="name-surname">
           <label class="label">Nome
@@ -38,6 +38,19 @@
         <label class="label-radio" for="tipo">Casa</label>
         <input class="nput-radio" required type="radio" name="tipo" id="housing-type-2">
         <label class="label-radio" for="tipo">Apartamento</label>
+      </fieldset>
+
+      <fieldset class="last-job">
+        <legend>Sobre o último emprego</legend>
+        <label for="">Resumo</label>
+        <textarea name="abstract" id="abstract" cols="30" rows="10" maxlength="1000" required placeholder="Digite o resumo. Máximo 1000 caracteres."></textarea>
+        <label class="label">Último cargo</label>
+        <input class="input" type="text" maxlength="40" required name="last-position" id="last-position">
+        <label class="label">Descrição do cargo</label>
+        <input class="input" type="text" maxlength="500" required name="job-description" id="job-description">
+        <label class="label">Data de início</label>
+        <input class="input" type="text" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required name="start-date" id="start-date">
+        <span class="check-date"></span>
       </fieldset>
     </form>
   </div>
