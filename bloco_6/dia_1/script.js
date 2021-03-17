@@ -2,6 +2,7 @@ const estado = document.getElementById("estado");
 const checkDate = document.querySelector('.check-date');
 const startDate = document.getElementById('start-date');
 const btnSubmit = document.getElementById('submit');
+const curriculum = document.getElementById('curriculum');
 
 const estados = [
   "AC - Acre",
@@ -71,11 +72,29 @@ function required() {
   }
 }
 
-const preventDef = function (event) {
-  event.preventDefault();
+function generateCurriculum() {
+  const personalDataInput = document.querySelectorAll('.personal-data input[type=text]');
+  const personalDataLabel = document.querySelectorAll('.personal-data label');
+  const personalTitle = document.createElement('h2');
+  personalTitle.innerHTML = 'Dados pessoais';
+  curriculum.appendChild(personalTitle);
+
+  for (let i = 0; i < personalDataLabel.length - 2; i += 1) {
+    let labelTitle = document.createElement('p');
+    labelTitle.innerHTML = `${personalDataLabel[i].innerText}: `;
+    curriculum.appendChild(labelTitle);
+    for (let j = 0; j < personalDataInput.length; j += 1) {
+      let labelData = document.createElement('p');
+      labelTitle.innerHTML = `${personalDataInput[j].value}`;
+      curriculum.appendChild(labelData);
+    }
+  }
 }
 
 btnSubmit.addEventListener('click', () => {
-  preventDef;
+  (event) => {
+    event.preventDefault();
+  }
   required();
+  generateCurriculum();
 })
