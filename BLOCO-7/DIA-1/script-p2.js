@@ -49,14 +49,26 @@
 
 let skills = ['HTML', 'CSS', 'JAVASCRIPT', 'GIT', 'GITHUB'];
 
+// Método 1
+
+// const replaceWith = (phrase, value) => {
+// 	let string = phrase.split('');
+// 	let newString = '';
+  
+// 	for (let i = 0; i < string.length; i += 1) {
+// 		string[i] = string[i] === 'x' ? value : string[i];
+// 		newString += string[i];
+// 	}
+
+// 	return newString;
+// };
+
+// Método 2
+
 const replaceWith = (phrase, value) => {
 	let string = phrase.split('');
-	let newString = '';
-  
-	for (let i = 0; i < string.length; i += 1) {
-		string[i] = string[i] === 'x' ? value : string[i];
-		newString += string[i];
-	}
+	string[string.indexOf('x')] = value;
+	let newString = string.join('');
 
 	return newString;
 };
