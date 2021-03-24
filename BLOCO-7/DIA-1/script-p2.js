@@ -33,3 +33,14 @@ const highestWord = (sValue) => {
 };
 
 console.log(highestWord('Maravilhosa graça, seu amor que não falha!'));
+
+// Exercício 03
+
+const numberClicks = document.getElementById('number-clicks');
+const btnClick = document.getElementById('click');
+let i = 0;
+
+btnClick.addEventListener('click', () => {
+	i += 1;
+	numberClicks.innerHTML = i;
+});
