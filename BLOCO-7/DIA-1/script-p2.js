@@ -50,15 +50,26 @@
 let skills = ['HTML', 'CSS', 'JAVASCRIPT', 'GIT', 'GITHUB'];
 
 const replaceWith = (phrase, value) => {
-  let string = phrase.split('');
-  let newString = '';
+	let string = phrase.split('');
+	let newString = '';
   
-  for (let i = 0; i < string.length; i += 1) {
-    string[i] = string[i] === 'x' ? value : string[i];
-    newString += string[i];
-  }
+	for (let i = 0; i < string.length; i += 1) {
+		string[i] = string[i] === 'x' ? value : string[i];
+		newString += string[i];
+	}
 
-  return newString;
+	return newString;
 };
 
-console.log(replaceWith('Tryber x aqui', 'Gabriel'));
+const skillsText = (value) => {
+	skills.sort();
+	let newString = `${value}! Minhas principais habilidads são:
+  ${skills[0]};
+  ${skills[1]};
+  ${skills[2]};
+  ${skills[3]};
+  ${skills[4]};`;
+	return newString;
+};
+
+console.log(skillsText(replaceWith('Tryber x aqui', 'Gabriel')));
