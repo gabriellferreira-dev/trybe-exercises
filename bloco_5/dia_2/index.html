@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let tagH1 = document.createElement('h1');
+      let tagDiv = document.createElement('div');
+      let divChild = document.createElement('div');
+      let tagP = document.createElement('p');
+      let tagDivLeft = document.createElement('div');
+      let tagDivRight = document.createElement('div');
+      let tagImg = document.createElement('img');
+      let listNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      let tagUl = document.createElement('ul');
+      let tagH3 = document.createElement('h3');
+
+      document.body.appendChild(tagH1).innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      tagDiv.className = 'main-content';
+      document.body.appendChild(tagDiv);
+
+      document.querySelector('.main-content').appendChild(divChild);
+      divChild.className = 'center-content';
+
+      document.querySelector('.center-content').appendChild(tagP); 
+      tagP.innerHTML = 'Vamo com tudo, Trybers!';
+
+      document.querySelector('.main-content').appendChild(tagDivLeft);
+      tagDivLeft.className = 'left-content';
+
+      document.querySelector('.main-content').appendChild(tagDivRight);
+      tagDivRight.className = 'right-content';
+
+      document.querySelector('.left-content').appendChild(tagImg);
+      tagImg.src = 'https://picsum.photos/200';
+      tagImg.className = 'small-image';
+
+      document.querySelector('.right-content').appendChild(tagUl);
+
+
+      for (let i = 0; i < listNumbers.length; i += 1) {
+        let liValue = document.createElement('li');
+        liValue.innerHTML = listNumbers[i];
+
+        document.querySelector('ul').appendChild(liValue);
+      }
+      
+      for (let i = 0; i < 3; i += 1) {
+        let tagH3 = document.createElement('h3');
+        document.querySelector('.main-content').appendChild(tagH3);
+      }
+
+    </script>
+  </body>
+</html>
