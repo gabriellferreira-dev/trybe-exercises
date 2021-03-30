@@ -18,16 +18,30 @@
 
 // 2
 
-const checkDraw = (numberDrawn, numberPlayed) => {
-  if (numberPlayed === numberDrawn) {
-    return 'Parabéns você ganhou';
+// const checkDraw = (numberDrawn, numberPlayed) => {
+//   if (numberPlayed === numberDrawn) {
+//     return 'Parabéns você ganhou';
+//   }
+//   return 'Tente novamente';
+// };
+
+// const drawResult = (numPlayed, func) => {
+//   const number = Math.round(Math.random() * 5);
+//   return func(number, numPlayed);
+// };
+
+// console.log(drawResult(3, checkDraw));
+
+// 3
+
+const correctAnswer = 'higher order function';
+const userAnswer = 'HIGHER ORDER FUNCTION';
+
+const checkAnswer = (rightAnswer) => (answered) => {
+  if (rightAnswer === answered) {
+    return true;
   }
-  return 'Tente novamente';
+  return false;
 };
 
-const drawResult = (numPlayed, func) => {
-  const number = Math.round(Math.random() * 5);
-  return func(number, numPlayed);
-};
-
-console.log(drawResult(3, checkDraw));
+console.log(checkAnswer(correctAnswer)(userAnswer));
