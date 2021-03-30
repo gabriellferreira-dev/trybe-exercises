@@ -34,14 +34,37 @@
 
 // 3
 
-const correctAnswer = 'higher order function';
-const userAnswer = 'HIGHER ORDER FUNCTION';
+// const correctAnswer = 'higher order function';
+// const userAnswer = 'HIGHER ORDER FUNCTION';
 
-const checkAnswer = (rightAnswer) => (answered) => {
-  if (rightAnswer === answered) {
-    return true;
-  }
-  return false;
+// const checkAnswer = (rightAnswer) => (answered) => {
+//   if (rightAnswer === answered) {
+//     return true;
+//   }
+//   return false;
+// };
+
+// console.log(checkAnswer(correctAnswer)(userAnswer));
+
+// 4
+
+// Realizado com ajuda da solução do tryber Maurício Viegas.
+
+const rightAnswers = ['B', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const checkAnswer = (rightAnswer, studentAnswer) => {
+  if (rightAnswer === studentAnswer) return 1;
+  if (studentAnswer === 'N.A') return 0;
+  return -0.5;
+}
+
+const scoreTotal = (rightAnswers, studentAnswers, checkAnswer) => {
+  let score = 0;
+  studentAnswers.forEach((answer, index) => {
+    score += checkAnswer(rightAnswers[index], answer);
+  });
+  return score;
 };
 
-console.log(checkAnswer(correctAnswer)(userAnswer));
+console.log(scoreTotal(rightAnswers, studentAnswers, checkAnswer));
