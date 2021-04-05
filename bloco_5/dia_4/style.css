@@ -1,0 +1,44 @@
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#title {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.header p {
+  line-height: 5px;
+  font-style: italic;
+}
+
+.content {
+  display: inline-block;
+  width: 800px;
+  left: 250px;
+  position: relative;
+}
+
+.style-change {
+  display: inline-block;
+  width: 250px;
+  position: absolute;
+}
+
+.color {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.paragraph {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.current-value-font,
+.current-value-line {
+  display: inline-block;
+}
