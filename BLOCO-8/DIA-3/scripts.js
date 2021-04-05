@@ -231,16 +231,28 @@ const books = [
 
 // 6 -------------------------------
 
-const expectedResult = [
-  'O Senhor dos Anéis',
-  'Fundação',
-  'O Chamado de Cthulhu',
-];
+// const expectedResult = [
+//   'O Senhor dos Anéis',
+//   'Fundação',
+//   'O Chamado de Cthulhu',
+// ];
 
-function oldBooks() {
-  return books.filter(book => (2021 - book.releaseYear) >= 60).map(book => book.name); 
+// function oldBooks() {
+//   return books.filter(book => (2021 - book.releaseYear) >= 60).map(book => book.name); 
+// }
+
+// console.log(oldBooks());
+
+// assert.deepStrictEqual(oldBooks(), expectedResult);
+
+// 7 ------------------------------
+
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  return books.find(book => book.author.name.includes('J. R. R')).name;
 }
 
-console.log(oldBooks());
+console.log(authorWith3DotsOnName());
 
-assert.deepStrictEqual(oldBooks(), expectedResult);
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
