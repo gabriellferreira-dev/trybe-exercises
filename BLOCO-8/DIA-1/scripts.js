@@ -50,21 +50,88 @@
 
 // Realizado com ajuda da solução do tryber Maurício Viegas.
 
-const rightAnswers = ['B', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
-const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+// const rightAnswers = ['B', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+// const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const checkAnswer = (rightAnswer, studentAnswer) => {
-  if (rightAnswer === studentAnswer) return 1;
-  if (studentAnswer === 'N.A') return 0;
-  return -0.5;
-}
+// const checkAnswer = (rightAnswer, studentAnswer) => {
+//   if (rightAnswer === studentAnswer) return 1;
+//   if (studentAnswer === 'N.A') return 0;
+//   return -0.5;
+// }
 
-const scoreTotal = (rightAnswers, studentAnswers, checkAnswer) => {
-  let score = 0;
-  studentAnswers.forEach((answer, index) => {
-    score += checkAnswer(rightAnswers[index], answer);
-  });
-  return score;
+// const scoreTotal = (rightAnswers, studentAnswers, checkAnswer) => {
+//   let score = 0;
+//   studentAnswers.forEach((answer, index) => {
+//     score += checkAnswer(rightAnswers[index], answer);
+//   });
+//   return score;
+// };
+
+// console.log(scoreTotal(rightAnswers, studentAnswers, checkAnswer));
+
+// Bônus
+
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
 };
 
-console.log(scoreTotal(rightAnswers, studentAnswers, checkAnswer));
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+const damage = (minDamage, maxDamage) => {
+  return Math.floor(Math.random() * (maxDamage - minDamage + 1)) + minDamage;
+};
+
+dragon.damage = damage(15, dragon.strength);
+warrior.damage = damage(warrior.strength, warrior.strength * warrior.weaponDmg);
+
+let callFunction = 0;
+
+const spentMana = (manaShift) => {
+  if (mage.mana < 15) {
+    return 'Não possui mana suficiente';
+  }
+  if (mage.mana >= 15) {
+    mage.mana -= 15;
+    return manaShift;
+  }
+};
+
+
+const mageBattle = () => {
+  return {
+    damage: damage(mage.intelligence, mage.intelligence * 2),
+    mana: spentMana(15),
+  };
+};
+
+
+// console.log(mageBattle().mana(manaShift));
+console.log(mageBattle());
+console.log(mageBattle());
+console.log(mageBattle());
+console.log(mageBattle());
+console.log(mageBattle());
+console.log(mageBattle());
+console.log(mageBattle());
+console.log(mageBattle());
+console.log(mageBattle());
+
+console.log(mage.mana);
+
+
