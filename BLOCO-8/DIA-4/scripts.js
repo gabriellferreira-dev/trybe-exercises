@@ -84,11 +84,23 @@ const books = [
   },
 ];
 
-function allNames() {
-  const namesConcat = books.reduce((a, {author: {name}}) => a !== '' ? `${a}, ${name}` : name, '');
-  return `Nomes: ${namesConcat}.`;
+// function allNames() {
+//   const namesConcat = books.reduce((a, {author: {name}}) => a !== '' ? `${a}, ${name}` : name, '');
+//   return `Nomes: ${namesConcat}.`;
+// }
+
+// console.log(allNames())
+
+// assert.deepStrictEqual(allNames(), 'Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.');  
+
+// 3 --------------------------------
+
+const expectedResult = 43;
+
+function averageAge() {
+  return books.reduce((acc, {author: {birthYear}}, i) => acc + (books[i].releaseYear - birthYear), 0) / books.length;
 }
 
-console.log(allNames())
+console.log(averageAge())
 
-assert.deepStrictEqual(allNames(), 'Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.');
+assert.strictEqual(averageAge(), expectedResult);
