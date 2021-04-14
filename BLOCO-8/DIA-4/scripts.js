@@ -107,23 +107,41 @@ const books = [
 
 // 4 -------------------------------------
 
-const expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin',
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991,
-};
+// const expectedResult = {
+//   author: {
+//     birthYear: 1948,
+//     name: 'George R. R. Martin',
+//   },
+//   genre: 'Fantasia',
+//   id: 1,
+//   name: 'As Crônicas de Gelo e Fogo',
+//   releaseYear: 1991,
+// };
 
-function longestNamedBook() {
-  return books.reduce((acc, book) =>
-    acc.name.length > book.name.length ? acc : book
-  );
+// function longestNamedBook() {
+//   return books.reduce((acc, book) =>
+//     acc.name.length > book.name.length ? acc : book
+//   );
+// }
+
+// console.log(longestNamedBook());
+
+// assert.deepStrictEqual(longestNamedBook(), expectedResult);
+
+// 5 --------------------------------
+
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
+function containsA() {
+  let count = 0;
+  const countLetters = names.forEach((name) => {
+    count += name.split('').filter((letter) => letter === 'a' || letter === 'A').length;
+  });
+  return count;
 }
 
-console.log(longestNamedBook());
-
-assert.deepStrictEqual(longestNamedBook(), expectedResult);
+assert.deepStrictEqual(containsA(), 20);
