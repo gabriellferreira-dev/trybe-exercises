@@ -1,4 +1,4 @@
-const { uppercase, getUserName, getRepos } = require('./asynctests');
+const { uppercase, getUserName, getRepos, getAnimal } = require('./asynctests');
 
 describe('Exercício 1 - Verificando a chamada da callback', () => {
   it('should return an uppercase string', (done) => {
@@ -33,9 +33,7 @@ describe('Exercício 3 - Verificando o resultado da função getUserName com asy
 describe('Exercício 4 - Verificando se lista contém respectivos repositórios', () => {
   it('must return true if it finds the repository', async () => {
     try {
-      const listRepository = await getRepos(
-        'https://api.github.com/orgs/tryber/repos'
-      );
+      const listRepository = await getRepos('https://api.github.com/orgs/tryber/repos');
       const reposToFind = [
         'sd-01-week4-5-project-todo-list',
         'sd-01-week4-5-project-meme-generator',
@@ -50,7 +48,7 @@ describe('Exercício 4 - Verificando se lista contém respectivos repositórios'
   });
 });
 
-describe('Exercício 4 - Descobrindo a saída no console log', () => {
+describe('Exercício 5 - Descobrindo a saída no console log', () => {
   beforeEach(() => console.log('1 - beforeEach'));
   afterEach(() => console.log('1 - afterEach'));
 
@@ -65,6 +63,26 @@ describe('Exercício 4 - Descobrindo a saída no console log', () => {
     afterEach(() => console.log('2 - afterEach'));
   
     test('', () => console.log('2 - test'));
+  });
+});
+
+describe('Exercício 6 - Testando promise - findAnimalByName', () => {
+  describe('Quando existe o animal com o nome procurado', () => {
+    test('Retorne o objeto do animal', () => {
+      expect.assertions(1);
+      return getAnimal('Dorminhoco').then(animal => {
+        expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
+      });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return getAnimal('Bob').catch(error =>
+        expect(error).toEqual('Nenhum animal com esse nome!')
+      );
+    });
   });
 });
 

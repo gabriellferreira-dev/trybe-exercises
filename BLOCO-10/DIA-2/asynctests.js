@@ -37,4 +37,26 @@ const getRepos = (url) => {
     });
 };
 
-module.exports = { uppercase, getUserName, getRepos };
+// 6
+
+const Animals = [
+  { name: 'Dorminhoco', age: 1, type: 'Dog' },
+  { name: 'Soneca', age: 2, type: 'Dog' },
+  { name: 'Preguiça', age: 5, type: 'Cat' },
+];
+
+const findAnimalByName = (name) => {
+  const animal = Animals.find((animal) => animal.name === name);
+  if (animal) return animal;
+  throw new Error('Nenhum animal com esse nome!')
+};
+
+const getAnimal = async (name) => {
+  try {
+    return findAnimalByName(name);
+  } catch (err) {
+    throw err.message;
+  }
+};
+
+module.exports = { uppercase, getUserName, getRepos, getAnimal };
