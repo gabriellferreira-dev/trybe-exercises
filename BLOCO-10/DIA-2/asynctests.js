@@ -59,4 +59,22 @@ const getAnimal = async (name) => {
   }
 };
 
-module.exports = { uppercase, getUserName, getRepos, getAnimal };
+const findAnimalByAge = (age) => {
+  const animal = Animals.filter((animal) => animal.age === age);
+  if (!animal.length) {
+    throw new Error('Nenhum animal com a idade encontrado');
+  }
+  return animal;
+}
+
+const getAnimalByAge = async (age) => {
+  try {
+    return findAnimalByAge(age);
+  } catch (err) {
+    throw err.message;
+  }
+}
+
+getAnimalByAge(10);
+
+module.exports = { uppercase, getUserName, getRepos, getAnimal, getAnimalByAge };

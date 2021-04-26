@@ -1,4 +1,4 @@
-const { uppercase, getUserName, getRepos, getAnimal } = require('./asynctests');
+const { uppercase, getUserName, getRepos, getAnimal, getAnimalByAge } = require('./asynctests');
 
 describe('Exercício 1 - Verificando a chamada da callback', () => {
   it('should return an uppercase string', (done) => {
@@ -66,7 +66,7 @@ describe('Exercício 5 - Descobrindo a saída no console log', () => {
   });
 });
 
-describe('Exercício 6 - Testando promise - findAnimalByName', () => {
+describe('Exercício 6.1 - Testando promise - findAnimalByName', () => {
   describe('Quando existe o animal com o nome procurado', () => {
     test('Retorne o objeto do animal', () => {
       expect.assertions(1);
@@ -84,5 +84,25 @@ describe('Exercício 6 - Testando promise - findAnimalByName', () => {
       );
     });
   });
+});
+
+describe('Exercício 6.2 - getAnimalByAge', () => {
+  describe('Quando encontrar o animal com a idade', () => {
+    it('must return an array of objects', () => {
+      expect.assertions(1);
+      return getAnimalByAge(2).then((animal) => {
+        expect(animal).toEqual([{ name: 'Soneca', age: 2, type: 'Dog' }])
+      });
+    });
+  });
+
+  describe('Quando não encontrar o animal', () => {
+    it('must return a error', () => {
+      expect.assertions(1);
+      return getAnimalByAge(10).catch((error) => {
+        expect(error).toEqual('Nenhum animal com a idade encontrado');
+      })
+    });
+  })
 });
 
